@@ -1,4 +1,1602 @@
 extends layout
 
 block content
-
+    #slidey(style='display:none;')
+        ul
+            li
+                img(src='images/5.jpg', alt=' ')
+                p.title Tarzan
+                p.description
+                    | Tarzan, having acclimated to life in London, is called back to his former home in the jungle to investigate the activities at a mining encampment.
+            li
+                img(src='images/2.jpg', alt=' ')
+                p.title Maximum Ride
+                p.description
+                    | Six children, genetically cross-bred with avian DNA, take flight around the country to discover their origins. Along the way, their mysterious past is ...
+            li
+                img(src='images/3.jpg', alt=' ')
+                p.title Independence
+                p.description
+                    | The fate of humanity hangs in the balance as the U.S. President and citizens decide if these aliens are to be trusted ...or feared.
+            li
+                img(src='images/4.jpg', alt=' ')
+                p.title Central Intelligence
+                p.description
+                    | Bullied as a teen for being overweight, Bob Stone (Dwayne Johnson) shows up to his high school reunion looking fit and muscular. Claiming to be on a top-secret ...
+            li
+                img(src='images/6.jpg', alt=' ')
+                p.title Ice Age
+                p.description
+                    | In the film's epilogue, Scrat keeps struggling to control the alien ship until it crashes on Mars, destroying all life on the planet.
+            li
+                img(src='images/7.jpg', alt=' ')
+                p.title X - Man
+                p.description
+                    | In 1977, paranormal investigators Ed (Patrick Wilson) and Lorraine Warren come out of a self-imposed sabbatical to travel to Enfield, a borough in north ...
+    script(src='js/jquery.slidey.js')
+    script(src='js/jquery.dotdotdot.min.js')
+    script(type='text/javascript').
+        $("#slidey").slidey({
+            interval: 8000,
+            listCount: 5,
+            autoplay: false,
+            showList: true
+        });
+        $(".slidey-list-description").dotdotdot();    
+    // banner-bottom
+    include partials/banner-bottom.jade
+    // //banner-bottom
+    .general_social_icons
+      nav.social
+        ul
+          li.w3_twitter
+            a(href='#')
+              | Twitter 
+              i.fa.fa-twitter
+          li.w3_facebook
+            a(href='#')
+              | Facebook 
+              i.fa.fa-facebook
+          li.w3_dribbble
+            a(href='#')
+              | Dribbble 
+              i.fa.fa-dribbble
+          li.w3_g_plus
+            a(href='#')
+              | Google+ 
+              i.fa.fa-google-plus
+    // general
+    .general
+      h4.latest-text.w3_latest_text Featured Movies
+      .container
+        .bs-example.bs-example-tabs(role='tabpanel', data-example-id='togglable-tabs')
+          ul#myTab.nav.nav-tabs(role='tablist')
+            li.active(role='presentation')
+              a#home-tab(href='#home', role='tab', data-toggle='tab', aria-controls='home', aria-expanded='true') Featured
+            li(role='presentation')
+              a#profile-tab(href='#profile', role='tab', data-toggle='tab', aria-controls='profile', aria-expanded='false') Top viewed
+            li(role='presentation')
+              a#rating-tab(href='#rating', role='tab', data-toggle='tab', aria-controls='rating', aria-expanded='true') Top Rating
+            li(role='presentation')
+              a#imdb-tab(href='#imdb', role='tab', data-toggle='tab', aria-controls='imdb', aria-expanded='false') Recently Added
+          #myTabContent.tab-content
+            #home.tab-pane.fade.active.in(role='tabpanel', aria-labelledby='home-tab')
+              .w3_agile_featured_movies
+                .col-md-2.w3l-movie-gride-agile
+                  a.hvr-shutter-out-horizontal(href='single.html')
+                    img.img-responsive(src='images/m15.jpg', title='album-name', alt=' ')
+                    .w3l-action-icon
+                      i.fa.fa-play-circle(aria-hidden='true')
+                  .mid-1.agileits_w3layouts_mid_1_home
+                    .w3l-movie-text
+                      h6
+                        a(href='single.html') God’s Compass
+                    .mid-2.agile_mid_2_home
+                      p 2016
+                      .block-stars
+                        ul.w3l-ratings
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star-half-o(aria-hidden='true')
+                      .clearfix
+                  .ribben
+                    p NEW
+                .col-md-2.w3l-movie-gride-agile
+                  a.hvr-shutter-out-horizontal(href='single.html')
+                    img.img-responsive(src='images/m2.jpg', title='album-name', alt=' ')
+                    .w3l-action-icon
+                      i.fa.fa-play-circle(aria-hidden='true')
+                  .mid-1.agileits_w3layouts_mid_1_home
+                    .w3l-movie-text
+                      h6
+                        a(href='single.html') Bad Moms
+                    .mid-2.agile_mid_2_home
+                      p 2016
+                      .block-stars
+                        ul.w3l-ratings
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star-o(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star-o(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star-o(aria-hidden='true')
+                      .clearfix
+                  .ribben
+                    p NEW
+                .col-md-2.w3l-movie-gride-agile
+                  a.hvr-shutter-out-horizontal(href='single.html')
+                    img.img-responsive(src='images/m5.jpg', title='album-name', alt=' ')
+                    .w3l-action-icon
+                      i.fa.fa-play-circle(aria-hidden='true')
+                  .mid-1.agileits_w3layouts_mid_1_home
+                    .w3l-movie-text
+                      h6
+                        a(href='single.html') Jason Bourne
+                    .mid-2.agile_mid_2_home
+                      p 2016
+                      .block-stars
+                        ul.w3l-ratings
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star-half-o(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star-o(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star-o(aria-hidden='true')
+                      .clearfix
+                  .ribben
+                    p NEW
+                .col-md-2.w3l-movie-gride-agile
+                  a.hvr-shutter-out-horizontal(href='single.html')
+                    img.img-responsive(src='images/m16.jpg', title='album-name', alt=' ')
+                    .w3l-action-icon
+                      i.fa.fa-play-circle(aria-hidden='true')
+                  .mid-1.agileits_w3layouts_mid_1_home
+                    .w3l-movie-text
+                      h6
+                        a(href='single.html') Rezort
+                    .mid-2.agile_mid_2_home
+                      p 2016
+                      .block-stars
+                        ul.w3l-ratings
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star-half-o(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star-o(aria-hidden='true')
+                      .clearfix
+                  .ribben
+                    p NEW
+                .col-md-2.w3l-movie-gride-agile
+                  a.hvr-shutter-out-horizontal(href='single.html')
+                    img.img-responsive(src='images/m17.jpg', title='album-name', alt=' ')
+                    .w3l-action-icon
+                      i.fa.fa-play-circle(aria-hidden='true')
+                  .mid-1.agileits_w3layouts_mid_1_home
+                    .w3l-movie-text
+                      h6
+                        a(href='single.html') Peter
+                    .mid-2.agile_mid_2_home
+                      p 2016
+                      .block-stars
+                        ul.w3l-ratings
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star-o(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star-o(aria-hidden='true')
+                      .clearfix
+                  .ribben
+                    p NEW
+                .col-md-2.w3l-movie-gride-agile
+                  a.hvr-shutter-out-horizontal(href='single.html')
+                    img.img-responsive(src='images/m18.jpg', title='album-name', alt=' ')
+                    .w3l-action-icon
+                      i.fa.fa-play-circle(aria-hidden='true')
+                  .mid-1.agileits_w3layouts_mid_1_home
+                    .w3l-movie-text
+                      h6
+                        a(href='single.html') ISRA 88
+                    .mid-2.agile_mid_2_home
+                      p 2016
+                      .block-stars
+                        ul.w3l-ratings
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star-o(aria-hidden='true')
+                      .clearfix
+                  .ribben
+                    p NEW
+                .col-md-2.w3l-movie-gride-agile
+                  a.hvr-shutter-out-horizontal(href='single.html')
+                    img.img-responsive(src='images/m1.jpg', title='album-name', alt=' ')
+                    .w3l-action-icon
+                      i.fa.fa-play-circle(aria-hidden='true')
+                  .mid-1.agileits_w3layouts_mid_1_home
+                    .w3l-movie-text
+                      h6
+                        a(href='single.html') War Dogs
+                    .mid-2.agile_mid_2_home
+                      p 2016
+                      .block-stars
+                        ul.w3l-ratings
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star-half-o(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star-o(aria-hidden='true')
+                      .clearfix
+                  .ribben
+                    p NEW
+                .col-md-2.w3l-movie-gride-agile
+                  a.hvr-shutter-out-horizontal(href='single.html')
+                    img.img-responsive(src='images/m14.jpg', title='album-name', alt=' ')
+                    .w3l-action-icon
+                      i.fa.fa-play-circle(aria-hidden='true')
+                  .mid-1.agileits_w3layouts_mid_1_home
+                    .w3l-movie-text
+                      h6
+                        a(href='single.html') The Other Side
+                    .mid-2.agile_mid_2_home
+                      p 2016
+                      .block-stars
+                        ul.w3l-ratings
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star-half-o(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star-o(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star-o(aria-hidden='true')
+                      .clearfix
+                  .ribben
+                    p NEW
+                .col-md-2.w3l-movie-gride-agile
+                  a.hvr-shutter-out-horizontal(href='single.html')
+                    img.img-responsive(src='images/m19.jpg', title='album-name', alt=' ')
+                    .w3l-action-icon
+                      i.fa.fa-play-circle(aria-hidden='true')
+                  .mid-1.agileits_w3layouts_mid_1_home
+                    .w3l-movie-text
+                      h6
+                        a(href='single.html') Civil War
+                    .mid-2.agile_mid_2_home
+                      p 2016
+                      .block-stars
+                        ul.w3l-ratings
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star-half-o(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star-o(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star-o(aria-hidden='true')
+                      .clearfix
+                  .ribben
+                    p NEW
+                .col-md-2.w3l-movie-gride-agile
+                  a.hvr-shutter-out-horizontal(href='single.html')
+                    img.img-responsive(src='images/m20.jpg', title='album-name', alt=' ')
+                    .w3l-action-icon
+                      i.fa.fa-play-circle(aria-hidden='true')
+                  .mid-1.agileits_w3layouts_mid_1_home
+                    .w3l-movie-text
+                      h6
+                        a(href='single.html') The Secret Life of Pets
+                    .mid-2.agile_mid_2_home
+                      p 2016
+                      .block-stars
+                        ul.w3l-ratings
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star-half-o(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star-o(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star-o(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star-o(aria-hidden='true')
+                      .clearfix
+                  .ribben
+                    p NEW
+                .col-md-2.w3l-movie-gride-agile
+                  a.hvr-shutter-out-horizontal(href='single.html')
+                    img.img-responsive(src='images/m21.jpg', title='album-name', alt=' ')
+                    .w3l-action-icon
+                      i.fa.fa-play-circle(aria-hidden='true')
+                  .mid-1.agileits_w3layouts_mid_1_home
+                    .w3l-movie-text
+                      h6
+                        a(href='single.html') The Jungle Book
+                    .mid-2.agile_mid_2_home
+                      p 2016
+                      .block-stars
+                        ul.w3l-ratings
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star-half-o(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star-o(aria-hidden='true')
+                      .clearfix
+                  .ribben
+                    p NEW
+                .col-md-2.w3l-movie-gride-agile
+                  a.hvr-shutter-out-horizontal(href='single.html')
+                    img.img-responsive(src='images/m22.jpg', title='album-name', alt=' ')
+                    .w3l-action-icon
+                      i.fa.fa-play-circle(aria-hidden='true')
+                  .mid-1.agileits_w3layouts_mid_1_home
+                    .w3l-movie-text
+                      h6
+                        a(href='single.html') Assassin's Creed 3
+                    .mid-2.agile_mid_2_home
+                      p 2016
+                      .block-stars
+                        ul.w3l-ratings
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star(aria-hidden='true')
+                          li
+                            a(href='#')
+                              i.fa.fa-star-half-o(aria-hidden='true')
+                      .clearfix
+                  .ribben
+                    p NEW
+                .clearfix  
+            #profile.tab-pane.fade(role='tabpanel', aria-labelledby='profile-tab')
+              .col-md-2.w3l-movie-gride-agile
+                a.hvr-shutter-out-horizontal(href='single.html')
+                  img.img-responsive(src='images/m22.jpg', title='album-name', alt=' ')
+                  .w3l-action-icon
+                    i.fa.fa-play-circle(aria-hidden='true')
+                .mid-1.agileits_w3layouts_mid_1_home
+                  .w3l-movie-text
+                    h6
+                      a(href='single.html') Assassin's Creed 3
+                  .mid-2.agile_mid_2_home
+                    p 2016
+                    .block-stars
+                      ul.w3l-ratings
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star-half-o(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star-o(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star-o(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star-o(aria-hidden='true')
+                    .clearfix
+                .ribben
+                  p NEW
+              .col-md-2.w3l-movie-gride-agile
+                a.hvr-shutter-out-horizontal(href='single.html')
+                  img.img-responsive(src='images/m2.jpg', title='album-name', alt=' ')
+                  .w3l-action-icon
+                    i.fa.fa-play-circle(aria-hidden='true')
+                .mid-1.agileits_w3layouts_mid_1_home
+                  .w3l-movie-text
+                    h6
+                      a(href='single.html') Bad Moms
+                  .mid-2.agile_mid_2_home
+                    p 2016
+                    .block-stars
+                      ul.w3l-ratings
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star-o(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star-o(aria-hidden='true')
+                    .clearfix
+                .ribben
+                  p NEW
+              .col-md-2.w3l-movie-gride-agile
+                a.hvr-shutter-out-horizontal(href='single.html')
+                  img.img-responsive(src='images/m9.jpg', title='album-name', alt=' ')
+                  .w3l-action-icon
+                    i.fa.fa-play-circle(aria-hidden='true')
+                .mid-1.agileits_w3layouts_mid_1_home
+                  .w3l-movie-text
+                    h6
+                      a(href='single.html') Central Intelligence
+                  .mid-2.agile_mid_2_home
+                    p 2016
+                    .block-stars
+                      ul.w3l-ratings
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star-half-o(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star-o(aria-hidden='true')
+                    .clearfix
+                .ribben
+                  p NEW
+              .clearfix  
+            #rating.tab-pane.fade(role='tabpanel', aria-labelledby='rating-tab')
+              .col-md-2.w3l-movie-gride-agile
+                a.hvr-shutter-out-horizontal(href='single.html')
+                  img.img-responsive(src='images/m7.jpg', title='album-name', alt=' ')
+                  .w3l-action-icon
+                    i.fa.fa-play-circle(aria-hidden='true')
+                .mid-1.agileits_w3layouts_mid_1_home
+                  .w3l-movie-text
+                    h6
+                      a(href='single.html') Light B/t Oceans
+                  .mid-2.agile_mid_2_home
+                    p 2016
+                    .block-stars
+                      ul.w3l-ratings
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star-half-o(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star-o(aria-hidden='true')
+                    .clearfix
+                .ribben
+                  p NEW
+              .col-md-2.w3l-movie-gride-agile
+                a.hvr-shutter-out-horizontal(href='single.html')
+                  img.img-responsive(src='images/m11.jpg', title='album-name', alt=' ')
+                  .w3l-action-icon
+                    i.fa.fa-play-circle(aria-hidden='true')
+                .mid-1.agileits_w3layouts_mid_1_home
+                  .w3l-movie-text
+                    h6
+                      a(href='single.html') X-Men
+                  .mid-2.agile_mid_2_home
+                    p 2016
+                    .block-stars
+                      ul.w3l-ratings
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star-half-o(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star-o(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star-o(aria-hidden='true')
+                    .clearfix
+                .ribben
+                  p NEW
+              .col-md-2.w3l-movie-gride-agile
+                a.hvr-shutter-out-horizontal(href='single.html')
+                  img.img-responsive(src='images/m8.jpg', title='album-name', alt=' ')
+                  .w3l-action-icon
+                    i.fa.fa-play-circle(aria-hidden='true')
+                .mid-1.agileits_w3layouts_mid_1_home
+                  .w3l-movie-text
+                    h6
+                      a(href='single.html') The BFG
+                  .mid-2.agile_mid_2_home
+                    p 2016
+                    .block-stars
+                      ul.w3l-ratings
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star-half-o(aria-hidden='true')
+                    .clearfix
+                .ribben
+                  p NEW
+              .col-md-2.w3l-movie-gride-agile
+                a.hvr-shutter-out-horizontal(href='single.html')
+                  img.img-responsive(src='images/m17.jpg', title='album-name', alt=' ')
+                  .w3l-action-icon
+                    i.fa.fa-play-circle(aria-hidden='true')
+                .mid-1.agileits_w3layouts_mid_1_home
+                  .w3l-movie-text
+                    h6
+                      a(href='single.html') Peter
+                  .mid-2.agile_mid_2_home
+                    p 2016
+                    .block-stars
+                      ul.w3l-ratings
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star-o(aria-hidden='true')
+                    .clearfix
+                .ribben
+                  p NEW
+              .clearfix  
+            #imdb.tab-pane.fade(role='tabpanel', aria-labelledby='imdb-tab')
+              .col-md-2.w3l-movie-gride-agile
+                a.hvr-shutter-out-horizontal(href='single.html')
+                  img.img-responsive(src='images/m22.jpg', title='album-name', alt=' ')
+                  .w3l-action-icon
+                    i.fa.fa-play-circle(aria-hidden='true')
+                .mid-1.agileits_w3layouts_mid_1_home
+                  .w3l-movie-text
+                    h6
+                      a(href='single.html') Assassin's Creed 3
+                  .mid-2.agile_mid_2_home
+                    p 2016
+                    .block-stars
+                      ul.w3l-ratings
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star-half-o(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star-o(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star-o(aria-hidden='true')
+                    .clearfix
+                .ribben
+                  p NEW
+              .col-md-2.w3l-movie-gride-agile
+                a.hvr-shutter-out-horizontal(href='single.html')
+                  img.img-responsive(src='images/m2.jpg', title='album-name', alt=' ')
+                  .w3l-action-icon
+                    i.fa.fa-play-circle(aria-hidden='true')
+                .mid-1.agileits_w3layouts_mid_1_home
+                  .w3l-movie-text
+                    h6
+                      a(href='single.html') Bad Moms
+                  .mid-2.agile_mid_2_home
+                    p 2016
+                    .block-stars
+                      ul.w3l-ratings
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star-half-o(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star-o(aria-hidden='true')
+                    .clearfix
+                .ribben
+                  p NEW
+              .col-md-2.w3l-movie-gride-agile
+                a.hvr-shutter-out-horizontal(href='single.html')
+                  img.img-responsive(src='images/m9.jpg', title='album-name', alt=' ')
+                  .w3l-action-icon
+                    i.fa.fa-play-circle(aria-hidden='true')
+                .mid-1.agileits_w3layouts_mid_1_home
+                  .w3l-movie-text
+                    h6
+                      a(href='single.html') Central Intelligence
+                  .mid-2.agile_mid_2_home
+                    p 2016
+                    .block-stars
+                      ul.w3l-ratings
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star-o(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star-o(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star-o(aria-hidden='true')
+                    .clearfix
+                .ribben
+                  p NEW
+              .col-md-2.w3l-movie-gride-agile
+                a.hvr-shutter-out-horizontal(href='single.html')
+                  img.img-responsive(src='images/m10.jpg', title='album-name', alt=' ')
+                  .w3l-action-icon
+                    i.fa.fa-play-circle(aria-hidden='true')
+                .mid-1.agileits_w3layouts_mid_1_home
+                  .w3l-movie-text
+                    h6
+                      a(href='single.html') Don't Think Twice
+                  .mid-2.agile_mid_2_home
+                    p 2016
+                    .block-stars
+                      ul.w3l-ratings
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star-half-o(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star-o(aria-hidden='true')
+                    .clearfix
+                .ribben
+                  p NEW
+              .col-md-2.w3l-movie-gride-agile
+                a.hvr-shutter-out-horizontal(href='single.html')
+                  img.img-responsive(src='images/m23.jpg', title='album-name', alt=' ')
+                  .w3l-action-icon
+                    i.fa.fa-play-circle(aria-hidden='true')
+                .mid-1.agileits_w3layouts_mid_1_home
+                  .w3l-movie-text
+                    h6
+                      a(href='single.html') Dead Island 2
+                  .mid-2.agile_mid_2_home
+                    p 2016
+                    .block-stars
+                      ul.w3l-ratings
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star-half-o(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star-o(aria-hidden='true')
+                        li
+                          a(href='#')
+                            i.fa.fa-star-o(aria-hidden='true')
+                    .clearfix
+                .ribben
+                  p NEW
+              .clearfix  
+    // //general
+    // Latest-tv-series
+        // Latest-tv-series
+    .Latest-tv-series
+      h4.latest-text.w3_latest_text.w3_home_popular Most Popular Movies
+      .container
+        section.slider
+          .flexslider
+            ul.slides
+              li
+                .agile_tv_series_grid
+                  .col-md-6.agile_tv_series_grid_left
+                    .w3ls_market_video_grid1
+                      img.img-responsive(src='images/h1-1.jpg', alt=' ')
+                      a.w3_play_icon(href='#small-dialog')
+                        span.glyphicon.glyphicon-play-circle(aria-hidden='true')
+                  .col-md-6.agile_tv_series_grid_right
+                    p.fexi_header the conjuring 2
+                    p.fexi_header_para
+                      span.conjuring_w3
+                        | Story Line
+                        label :
+                      |  720p,Bluray HD Free Movie Downloads, Watch Free Movies Online with high speed Free Movie Streaming | MyDownloadTube Lorraine and Ed Warren go to north London to help a single...
+                    p.fexi_header_para
+                      span
+                        | Date of Release
+                        label :
+                      |  Jun 10, 2016
+                    p.fexi_header_para
+                      span
+                        | Genres
+                        label :
+                      a(href='genres.html') Drama
+                      |  
+                      a(href='genres.html') Adventure
+                      |  
+                      a(href='genres.html') Family
+                    p.fexi_header_para.fexi_header_para1
+                      span
+                        | Star Rating
+                        label :
+                      a(href='#')
+                        i.fa.fa-star(aria-hidden='true')
+                      a(href='#')
+                        i.fa.fa-star(aria-hidden='true')
+                      a(href='#')
+                        i.fa.fa-star-half-o(aria-hidden='true')
+                      a(href='#')
+                        i.fa.fa-star-o(aria-hidden='true')
+                      a(href='#')
+                        i.fa.fa-star-o(aria-hidden='true')
+                  .clearfix  
+                  .agileinfo_flexislider_grids
+                    .col-md-2.w3l-movie-gride-agile
+                      a.hvr-shutter-out-horizontal(href='single.html')
+                        img.img-responsive(src='images/m22.jpg', title='album-name', alt=' ')
+                        .w3l-action-icon
+                          i.fa.fa-play-circle(aria-hidden='true')
+                      .mid-1.agileits_w3layouts_mid_1_home
+                        .w3l-movie-text
+                          h6
+                            a(href='single.html') Assassin's Creed 3
+                        .mid-2.agile_mid_2_home
+                          p 2016
+                          .block-stars
+                            ul.w3l-ratings
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-half-o(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-o(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-o(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-o(aria-hidden='true')
+                          .clearfix
+                      .ribben
+                        p NEW
+                    .col-md-2.w3l-movie-gride-agile
+                      a.hvr-shutter-out-horizontal(href='single.html')
+                        img.img-responsive(src='images/m2.jpg', title='album-name', alt=' ')
+                        .w3l-action-icon
+                          i.fa.fa-play-circle(aria-hidden='true')
+                      .mid-1.agileits_w3layouts_mid_1_home
+                        .w3l-movie-text
+                          h6
+                            a(href='single.html') Bad Moms
+                        .mid-2.agile_mid_2_home
+                          p 2016
+                          .block-stars
+                            ul.w3l-ratings
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-o(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-o(aria-hidden='true')
+                          .clearfix
+                      .ribben
+                        p NEW
+                    .col-md-2.w3l-movie-gride-agile
+                      a.hvr-shutter-out-horizontal(href='single.html')
+                        img.img-responsive(src='images/m9.jpg', title='album-name', alt=' ')
+                        .w3l-action-icon
+                          i.fa.fa-play-circle(aria-hidden='true')
+                      .mid-1.agileits_w3layouts_mid_1_home
+                        .w3l-movie-text
+                          h6
+                            a(href='single.html') Central Intelligence
+                        .mid-2.agile_mid_2_home
+                          p 2016
+                          .block-stars
+                            ul.w3l-ratings
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-half-o(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-o(aria-hidden='true')
+                          .clearfix
+                      .ribben
+                        p NEW
+                    .col-md-2.w3l-movie-gride-agile
+                      a.hvr-shutter-out-horizontal(href='single.html')
+                        img.img-responsive(src='images/m7.jpg', title='album-name', alt=' ')
+                        .w3l-action-icon
+                          i.fa.fa-play-circle(aria-hidden='true')
+                      .mid-1.agileits_w3layouts_mid_1_home
+                        .w3l-movie-text
+                          h6
+                            a(href='single.html') Light B/t Oceans
+                        .mid-2.agile_mid_2_home
+                          p 2016
+                          .block-stars
+                            ul.w3l-ratings
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-half-o(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-o(aria-hidden='true')
+                          .clearfix
+                      .ribben
+                        p NEW
+                    .col-md-2.w3l-movie-gride-agile
+                      a.hvr-shutter-out-horizontal(href='single.html')
+                        img.img-responsive(src='images/m11.jpg', title='album-name', alt=' ')
+                        .w3l-action-icon
+                          i.fa.fa-play-circle(aria-hidden='true')
+                      .mid-1.agileits_w3layouts_mid_1_home
+                        .w3l-movie-text
+                          h6
+                            a(href='single.html') X-Men
+                        .mid-2.agile_mid_2_home
+                          p 2016
+                          .block-stars
+                            ul.w3l-ratings
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-half-o(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-o(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-o(aria-hidden='true')
+                          .clearfix
+                      .ribben
+                        p NEW
+                    .col-md-2.w3l-movie-gride-agile
+                      a.hvr-shutter-out-horizontal(href='single.html')
+                        img.img-responsive(src='images/m17.jpg', title='album-name', alt=' ')
+                        .w3l-action-icon
+                          i.fa.fa-play-circle(aria-hidden='true')
+                      .mid-1.agileits_w3layouts_mid_1_home
+                        .w3l-movie-text
+                          h6
+                            a(href='single.html') Peter
+                        .mid-2.agile_mid_2_home
+                          p 2016
+                          .block-stars
+                            ul.w3l-ratings
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-o(aria-hidden='true')
+                          .clearfix
+                      .ribben
+                        p NEW
+                    .clearfix  
+              li
+                .agile_tv_series_grid
+                  .col-md-6.agile_tv_series_grid_left
+                    .w3ls_market_video_grid1
+                      img.img-responsive(src='images/h2-1.jpg', alt=' ')
+                      a.w3_play_icon1(href='#small-dialog1')
+                        span.glyphicon.glyphicon-play-circle(aria-hidden='true')
+                  .col-md-6.agile_tv_series_grid_right
+                    p.fexi_header a haunting in cawdor
+                    p.fexi_header_para
+                      span.conjuring_w3
+                        | Story Line
+                        label :
+                      |  Vivian Miller, sent to a rehabilitation programme for young offenders, where a theatre camp is used as an alternative to jail time. After she views tape ...
+                    p.fexi_header_para
+                      span
+                        | Date of Release
+                        label :
+                      |  Oct 09, 2015
+                    p.fexi_header_para
+                      span
+                        | Genres
+                        label :
+                      a(href='genres.html') Thriller
+                      |  
+                      a(href='genres.html') Horror
+                    p.fexi_header_para.fexi_header_para1
+                      span
+                        | Star Rating
+                        label :
+                      a(href='#')
+                        i.fa.fa-star(aria-hidden='true')
+                      a(href='#')
+                        i.fa.fa-star(aria-hidden='true')
+                      a(href='#')
+                        i.fa.fa-star(aria-hidden='true')
+                      a(href='#')
+                        i.fa.fa-star-half-o(aria-hidden='true')
+                      a(href='#')
+                        i.fa.fa-star-o(aria-hidden='true')
+                  .clearfix  
+                  .agileinfo_flexislider_grids
+                    .col-md-2.w3l-movie-gride-agile
+                      a.hvr-shutter-out-horizontal(href='single.html')
+                        img.img-responsive(src='images/m2.jpg', title='album-name', alt=' ')
+                        .w3l-action-icon
+                          i.fa.fa-play-circle(aria-hidden='true')
+                      .mid-1.agileits_w3layouts_mid_1_home
+                        .w3l-movie-text
+                          h6
+                            a(href='single.html') Bad Moms
+                        .mid-2.agile_mid_2_home
+                          p 2016
+                          .block-stars
+                            ul.w3l-ratings
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-o(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-o(aria-hidden='true')
+                          .clearfix
+                      .ribben
+                        p NEW
+                    .col-md-2.w3l-movie-gride-agile
+                      a.hvr-shutter-out-horizontal(href='single.html')
+                        img.img-responsive(src='images/m9.jpg', title='album-name', alt=' ')
+                        .w3l-action-icon
+                          i.fa.fa-play-circle(aria-hidden='true')
+                      .mid-1.agileits_w3layouts_mid_1_home
+                        .w3l-movie-text
+                          h6
+                            a(href='single.html') Central Intelligence
+                        .mid-2.agile_mid_2_home
+                          p 2016
+                          .block-stars
+                            ul.w3l-ratings
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-half-o(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-o(aria-hidden='true')
+                          .clearfix
+                      .ribben
+                        p NEW
+                    .col-md-2.w3l-movie-gride-agile
+                      a.hvr-shutter-out-horizontal(href='single.html')
+                        img.img-responsive(src='images/m7.jpg', title='album-name', alt=' ')
+                        .w3l-action-icon
+                          i.fa.fa-play-circle(aria-hidden='true')
+                      .mid-1.agileits_w3layouts_mid_1_home
+                        .w3l-movie-text
+                          h6
+                            a(href='single.html') Light B/t Oceans
+                        .mid-2.agile_mid_2_home
+                          p 2016
+                          .block-stars
+                            ul.w3l-ratings
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-half-o(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-o(aria-hidden='true')
+                          .clearfix
+                      .ribben
+                        p NEW
+                    .col-md-2.w3l-movie-gride-agile
+                      a.hvr-shutter-out-horizontal(href='single.html')
+                        img.img-responsive(src='images/m11.jpg', title='album-name', alt=' ')
+                        .w3l-action-icon
+                          i.fa.fa-play-circle(aria-hidden='true')
+                      .mid-1.agileits_w3layouts_mid_1_home
+                        .w3l-movie-text
+                          h6
+                            a(href='single.html') X-Men
+                        .mid-2.agile_mid_2_home
+                          p 2016
+                          .block-stars
+                            ul.w3l-ratings
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-half-o(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-o(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-o(aria-hidden='true')
+                          .clearfix
+                      .ribben
+                        p NEW
+                    .col-md-2.w3l-movie-gride-agile
+                      a.hvr-shutter-out-horizontal(href='single.html')
+                        img.img-responsive(src='images/m17.jpg', title='album-name', alt=' ')
+                        .w3l-action-icon
+                          i.fa.fa-play-circle(aria-hidden='true')
+                      .mid-1.agileits_w3layouts_mid_1_home
+                        .w3l-movie-text
+                          h6
+                            a(href='single.html') Peter
+                        .mid-2.agile_mid_2_home
+                          p 2016
+                          .block-stars
+                            ul.w3l-ratings
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-o(aria-hidden='true')
+                          .clearfix
+                      .ribben
+                        p NEW
+                    .col-md-2.w3l-movie-gride-agile
+                      a.hvr-shutter-out-horizontal(href='single.html')
+                        img.img-responsive(src='images/m21.jpg', title='album-name', alt=' ')
+                        .w3l-action-icon
+                          i.fa.fa-play-circle(aria-hidden='true')
+                      .mid-1.agileits_w3layouts_mid_1_home
+                        .w3l-movie-text
+                          h6
+                            a(href='single.html') The Jungle Book
+                        .mid-2.agile_mid_2_home
+                          p 2016
+                          .block-stars
+                            ul.w3l-ratings
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-half-o(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-o(aria-hidden='true')
+                          .clearfix
+                      .ribben
+                        p NEW
+                    .clearfix  
+              li
+                .agile_tv_series_grid
+                  .col-md-6.agile_tv_series_grid_left
+                    .w3ls_market_video_grid1
+                      img.img-responsive(src='images/h3-1.jpg', alt=' ')
+                      a.w3_play_icon2(href='#small-dialog2')
+                        span.glyphicon.glyphicon-play-circle(aria-hidden='true')
+                  .col-md-6.agile_tv_series_grid_right
+                    p.fexi_header civil war captain America
+                    p.fexi_header_para
+                      span.conjuring_w3
+                        | Story Line
+                        label :
+                      |  After the Avengers leaves some collateral damage, political pressure mounts to install a system of accountability. The new status quo deeply divides ...
+                    p.fexi_header_para
+                      span
+                        | Date of Release
+                        label :
+                      |  May 06, 2016
+                    p.fexi_header_para
+                      span
+                        | Genres
+                        label :
+                      a(href='genres.html') Action
+                      |  
+                      a(href='genres.html') Adventure
+                    p.fexi_header_para.fexi_header_para1
+                      span
+                        | Star Rating
+                        label :
+                      a(href='#')
+                        i.fa.fa-star(aria-hidden='true')
+                      a(href='#')
+                        i.fa.fa-star(aria-hidden='true')
+                      a(href='#')
+                        i.fa.fa-star(aria-hidden='true')
+                      a(href='#')
+                        i.fa.fa-star-o(aria-hidden='true')
+                      a(href='#')
+                        i.fa.fa-star-o(aria-hidden='true')
+                  .clearfix  
+                  .agileinfo_flexislider_grids
+                    .col-md-2.w3l-movie-gride-agile
+                      a.hvr-shutter-out-horizontal(href='single.html')
+                        img.img-responsive(src='images/m2.jpg', title='album-name', alt=' ')
+                        .w3l-action-icon
+                          i.fa.fa-play-circle(aria-hidden='true')
+                      .mid-1.agileits_w3layouts_mid_1_home
+                        .w3l-movie-text
+                          h6
+                            a(href='single.html') Bad Moms
+                        .mid-2.agile_mid_2_home
+                          p 2016
+                          .block-stars
+                            ul.w3l-ratings
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-o(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-o(aria-hidden='true')
+                          .clearfix
+                      .ribben
+                        p NEW
+                    .col-md-2.w3l-movie-gride-agile
+                      a.hvr-shutter-out-horizontal(href='single.html')
+                        img.img-responsive(src='images/m9.jpg', title='album-name', alt=' ')
+                        .w3l-action-icon
+                          i.fa.fa-play-circle(aria-hidden='true')
+                      .mid-1.agileits_w3layouts_mid_1_home
+                        .w3l-movie-text
+                          h6
+                            a(href='single.html') Central Intelligence
+                        .mid-2.agile_mid_2_home
+                          p 2016
+                          .block-stars
+                            ul.w3l-ratings
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-half-o(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-o(aria-hidden='true')
+                          .clearfix
+                      .ribben
+                        p NEW
+                    .col-md-2.w3l-movie-gride-agile
+                      a.hvr-shutter-out-horizontal(href='single.html')
+                        img.img-responsive(src='images/m7.jpg', title='album-name', alt=' ')
+                        .w3l-action-icon
+                          i.fa.fa-play-circle(aria-hidden='true')
+                      .mid-1.agileits_w3layouts_mid_1_home
+                        .w3l-movie-text
+                          h6
+                            a(href='single.html') Light B/t Oceans
+                        .mid-2.agile_mid_2_home
+                          p 2016
+                          .block-stars
+                            ul.w3l-ratings
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-half-o(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-o(aria-hidden='true')
+                          .clearfix
+                      .ribben
+                        p NEW
+                    .col-md-2.w3l-movie-gride-agile
+                      a.hvr-shutter-out-horizontal(href='single.html')
+                        img.img-responsive(src='images/m11.jpg', title='album-name', alt=' ')
+                        .w3l-action-icon
+                          i.fa.fa-play-circle(aria-hidden='true')
+                      .mid-1.agileits_w3layouts_mid_1_home
+                        .w3l-movie-text
+                          h6
+                            a(href='single.html') X-Men
+                        .mid-2.agile_mid_2_home
+                          p 2016
+                          .block-stars
+                            ul.w3l-ratings
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-half-o(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-o(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-o(aria-hidden='true')
+                          .clearfix
+                      .ribben
+                        p NEW
+                    .col-md-2.w3l-movie-gride-agile
+                      a.hvr-shutter-out-horizontal(href='single.html')
+                        img.img-responsive(src='images/m17.jpg', title='album-name', alt=' ')
+                        .w3l-action-icon
+                          i.fa.fa-play-circle(aria-hidden='true')
+                      .mid-1.agileits_w3layouts_mid_1_home
+                        .w3l-movie-text
+                          h6
+                            a(href='single.html') Peter
+                        .mid-2.agile_mid_2_home
+                          p 2016
+                          .block-stars
+                            ul.w3l-ratings
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-o(aria-hidden='true')
+                          .clearfix
+                      .ribben
+                        p NEW
+                    .col-md-2.w3l-movie-gride-agile
+                      a.hvr-shutter-out-horizontal(href='single.html')
+                        img.img-responsive(src='images/m20.jpg', title='album-name', alt=' ')
+                        .w3l-action-icon
+                          i.fa.fa-play-circle(aria-hidden='true')
+                      .mid-1.agileits_w3layouts_mid_1_home
+                        .w3l-movie-text
+                          h6
+                            a(href='single.html') The Secret Life of Pets
+                        .mid-2.agile_mid_2_home
+                          p 2016
+                          .block-stars
+                            ul.w3l-ratings
+                              li
+                                a(href='#')
+                                  i.fa.fa-star(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-half-o(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-o(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-o(aria-hidden='true')
+                              li
+                                a(href='#')
+                                  i.fa.fa-star-o(aria-hidden='true')
+                          .clearfix
+                      .ribben
+                        p NEW
+                    .clearfix  
+        // flexSlider
+        link(rel='stylesheet', href='css/flexslider.css', type='text/css', media='screen', property='')
+        script(defer='', src='js/jquery.flexslider.js')
+        script(type='text/javascript').
+          $(window).load(function(){
+          $('.flexslider').flexslider({
+          animation: "slide",
+          start: function(slider){
+          $('body').removeClass('loading');
+          }
+          });
+          });
+        // //flexSlider
+        // pop-up-box
+        script(src='js/jquery.magnific-popup.js', type='text/javascript')
+        // //pop-up-box
+        #small-dialog.mfp-hide
+          iframe(src='https://player.vimeo.com/video/164819130?title=0&byline=0')
+        #small-dialog1.mfp-hide
+          iframe(src='https://player.vimeo.com/video/148284736')
+        #small-dialog2.mfp-hide
+          iframe(src='https://player.vimeo.com/video/165197924?color=ffffff&title=0&byline=0&portrait=0')
+        script.
+          $(document).ready(function() {
+          $('.w3_play_icon,.w3_play_icon1,.w3_play_icon2').magnificPopup({
+          type: 'inline',
+          fixedContentPos: false,
+          fixedBgPos: true,
+          overflowY: 'auto',
+          closeBtnInside: true,
+          preloader: false,
+          midClick: true,
+          removalDelay: 300,
+          mainClass: 'my-mfp-zoom-in'
+          });
+          });
+        // //Latest-tv-series
+      
+        // Bootstrap Core JavaScript
+        script(src='js/bootstrap.min.js')
+        script.
+          $(document).ready(function(){
+          $(".dropdown").hover(
+          function() {
+          $('.dropdown-menu', this).stop( true, true ).slideDown("fast");
+          $(this).toggleClass('open');
+          },
+          function() {
+          $('.dropdown-menu', this).stop( true, true ).slideUp("fast");
+          $(this).toggleClass('open');
+          }
+          );
+          });
+        // //Bootstrap Core JavaScript
+        // here stars scrolling icon
+        script(type='text/javascript').
+          $(document).ready(function() {
+          /*
+          var defaults = {
+          containerID: 'toTop', // fading element id
+          containerHoverID: 'toTopHover', // fading element hover id
+          scrollSpeed: 1200,
+          easingType: 'linear'
+          };
+          */
+          $().UItoTop({ easingType: 'easeOutQuart' });
+          });
+  
+  
