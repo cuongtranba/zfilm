@@ -1,0 +1,42 @@
+#slidey(style='display:none;')
+    ul
+            li
+                img(src='images/5.jpg', alt=' ')
+                p.title Tarzan
+                p.description
+                    | Tarzan, having acclimated to life in London, is called back to his former home in the jungle to investigate the activities at a mining encampment.
+            li
+                img(src='images/2.jpg', alt=' ')
+                p.title Maximum Ride
+                p.description
+                    | Six children, genetically cross-bred with avian DNA, take flight around the country to discover their origins. Along the way, their mysterious past is ...
+            li
+                img(src='images/3.jpg', alt=' ')
+                p.title Independence
+                p.description
+                    | The fate of humanity hangs in the balance as the U.S. President and citizens decide if these aliens are to be trusted ...or feared.
+            li
+                img(src='images/4.jpg', alt=' ')
+                p.title Central Intelligence
+                p.description
+                    | Bullied as a teen for being overweight, Bob Stone (Dwayne Johnson) shows up to his high school reunion looking fit and muscular. Claiming to be on a top-secret ...
+            li
+                img(src='images/6.jpg', alt=' ')
+                p.title Ice Age
+                p.description
+                    | In the film's epilogue, Scrat keeps struggling to control the alien ship until it crashes on Mars, destroying all life on the planet.
+            li
+                img(src='images/7.jpg', alt=' ')
+                p.title X - Man
+                p.description
+                    | In 1977, paranormal investigators Ed (Patrick Wilson) and Lorraine Warren come out of a self-imposed sabbatical to travel to Enfield, a borough in north ...        
+    script(src='js/jquery.slidey.js')
+    script(src='js/jquery.dotdotdot.min.js')
+    script(type='text/javascript').
+        $("#slidey").slidey({
+            interval: 8000,
+            listCount: 5,
+            autoplay: false,
+            showList: true
+        });
+        $(".slidey-list-description").dotdotdot();    
